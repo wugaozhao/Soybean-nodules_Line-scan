@@ -1,0 +1,29 @@
+完整操作流程
+1. 切 tile：
+python tools\make_nodule_tiles.py output\Date0810\3_900.bmp --split train --tile-size 1024 --stride 768 --format jpg --quality 95
+
+2. 用 labelme 标注，每个根瘤一个 polygon，标签名必须是：
+nodule
+启动：
+pip install -e Thirdparty\labelme
+powershell -ExecutionPolicy Bypass -File tools\open_labelme_nodule.ps1 -Split train
+
+3. 转 COCO：
+python tools\labelme_to_coco_nodule.py --split train
+python tools\labelme_to_coco_nodule.py --split val
+
+4. 校验数据集：
+python tools\validate_nodule_coco.py --split train
+python tools\validate_nodule_coco.py --split val
+
+5. 训练优先顺序：
+powershell -ExecutionPolicy Bypass -File tools\train_nodule_mmdet.ps1 `
+  -Config configs\mmdetection\nodule_cascade_mask_rcnn_r50_fpn_1024.py `
+  -WorkDir work_dirs\nodule\cascade_mask_rcnn_r50_fpn_1024
+
+之后再训练 ConvNeXt-T 和 Mask2Former 对照。
+
+20260822
+切tile
+python tools\make_nodule_tiles.py output\Date0820 --split train --tile-size 1024 --stride 768 --format jpg --quality 95
+python tools\make_nodule_tiles.py output\Date0820 --out-dir data\nodule_coco --split train --tile-size 1024 --stride 768 --format jpg --quality 95 #指定保存位置

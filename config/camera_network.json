@@ -1,0 +1,8 @@
+{
+  "adapter_name": "以太网",
+  "pc_ip": "169.254.32.100",
+  "subnet_mask": "255.255.0.0",
+  "camera_ip": "169.254.32.1",
+  "enum_timeout_ms": 200,
+  "auto_configure": false
+}

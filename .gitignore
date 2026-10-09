@@ -1,0 +1,81 @@
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+.agents/
+
+# Python bytecode, caches, environments, and tooling state
+__pycache__/
+*.py[cod]
+*$py.class
+.python-version
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Local secrets and machine-specific overrides
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets.*
+credentials.*
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+~$*
+/tmp/
+
+# Packaging and generated executables
+/build/
+/dist/
+*.exe
+*.msi
+
+# Runtime captures, predictions, and training artifacts
+/output/
+/work_dirs/
+/runs/
+/wandb/
+/mlruns/
+*.memmap
+
+# Local datasets and annotations (publish separately or use Git LFS/DVC)
+/data/
+
+# Model weights and exported inference engines
+*.pdparams
+*.pdopt
+*.pdstates
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.engine
+*.tflite
+
+# Third-party source trees and vendor SDKs are installed separately
+/Thirdparty/
+
+# Hardware installers/manuals and downloaded literature are not source code
+/Equipment/
+/Papers/
+/文献自动下载_正文/PDFs/

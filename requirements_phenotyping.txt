@@ -1,0 +1,12 @@
+numpy<2
+Pillow
+PyYAML
+scipy
+scikit-image
+paddlepaddle
+visualdl>=2.2.0
+opencv-python<=4.6.0
+tqdm
+filelock
+prettytable
+scikit-learn
