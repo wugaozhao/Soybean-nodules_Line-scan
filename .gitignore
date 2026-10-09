@@ -75,7 +75,9 @@ credentials.*
 # Third-party source trees and vendor SDKs are installed separately
 /Thirdparty/
 
-# Hardware installers/manuals and downloaded literature are not source code
+# Hardware installers/manuals and literature research files are not source code
 /Equipment/
 /Papers/
-/文献自动下载_正文/PDFs/
+/文献自动下载_正文/
+/soybean_root_nodule_review_*.md
+/近五年大豆根系与根瘤高水平文献检索综述_*.md
